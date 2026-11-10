@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Buscar · NetAcademy Pro</title>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body data-page="buscar">
+<header class="vh" id="vh">
+<canvas id="vc" aria-hidden="true"></canvas>
+<div class="vh-shade"></div><div class="vh-beam"></div>
+<div class="vh-in">
+<div class="vh-live"><i></i> EN VIVO · Red global de laboratorios</div>
+<h1 class="vh-title"><svg class="vh-logo" viewBox="0 0 48 48" aria-hidden="true"><g fill="#049FD9"><rect x="4" y="26" width="6" height="16" rx="2"/><rect x="14" y="18" width="6" height="24" rx="2"/><rect x="24" y="10" width="6" height="32" rx="2"/><rect x="34" y="2" width="6" height="40" rx="2"/></g></svg><span class="vh-name">NetAcademy</span><span class="vh-pro">Pro</span></h1>
+<p class="vh-sub">Telecomunicaciones y Redes Cisco · De la trama Ethernet a la convergencia de OSPF</p>
+<div class="vh-cta"><a class="btn" href="tcpip.html">Comenzar a aprender</a><a class="btn vh-ghost" href="laboratorios.html">Abrir laboratorio</a></div>
+</div>
+</header>    
+<div class="app">
+<aside id="side"><h1><a href="index.html">NetAcademy Pro</a></h1><small>Telecomunicaciones y Redes Cisco</small>
+<a class="nav" href="index.html" data-p="home">Inicio<span class="ck"></span></a>
+<a class="nav" href="tcpip.html" data-p="tcpip" data-id="tcpip">TCP/IP y direccionamiento<span class="ck"></span></a>
+<a class="nav" href="switching.html" data-p="switching" data-id="switching">Switching<span class="ck"></span></a>
+<a class="nav" href="vlan.html" data-p="vlan" data-id="vlan">VLAN, trunking y VTP<span class="ck"></span></a>
+<a class="nav" href="stp.html" data-p="stp" data-id="stp">STP y EtherChannel<span class="ck"></span></a>
+<a class="nav" href="routing.html" data-p="routing" data-id="routing">Routing e inter-VLAN<span class="ck"></span></a>
+<a class="nav" href="rip.html" data-p="rip" data-id="rip">RIP<span class="ck"></span></a>
+<a class="nav" href="eigrp.html" data-p="eigrp" data-id="eigrp">EIGRP<span class="ck"></span></a>
+<a class="nav" href="ospf.html" data-p="ospf" data-id="ospf">OSPF<span class="ck"></span></a>
+<a class="nav" href="dhcp.html" data-p="dhcp" data-id="dhcp">DHCP<span class="ck"></span></a>
+<a class="nav" href="acl.html" data-p="acl" data-id="acl">ACL y NAT<span class="ck"></span></a>
+<a class="nav" href="vpn.html" data-p="vpn" data-id="vpn">VPN e IPsec<span class="ck"></span></a>
+<a class="nav" href="fhrp.html" data-p="fhrp" data-id="fhrp">HSRP y FHRP<span class="ck"></span></a>
+<a class="nav" href="seguridad.html" data-p="sec" data-id="sec">IPv6, wireless y seguridad<span class="ck"></span></a>
+<a class="nav" href="laboratorios.html" data-p="labs">Laboratorios virtuales<span class="ck"></span></a>
+<a class="nav" href="comandos.html" data-p="cmds">Referencia de comandos<span class="ck"></span></a>
+<a class="nav" href="certificaciones.html" data-p="cert">Centro de certificaciones<span class="ck"></span></a>
+</aside>
+<main>
+<div class="top"><form id="sf" action="buscar.html" method="get" role="search"><input id="q" name="q" type="search" placeholder="Buscar comandos o temas: ospf, vlan, show ip route…" aria-label="Buscador técnico"></form><button class="btn alt" id="theme" type="button">Modo oscuro</button></div>
+<section class="sec"><h3 id="sr-title">Buscador técnico</h3><p id="sr-msg">Escribe un comando o tema arriba (ospf, vlan, show ip route…) y pulsa Enter.</p>
+<div id="sr-res" hidden><p>Motor de comandos y base de conocimientos.</p><h4>Comandos</h4><div class="card wrap"><table><tbody>
+<tr data-k="show ip route tabla de enrutamiento"><td class="mono">show ip route</td><td>Tabla de enrutamiento</td></tr>
+<tr data-k="show ip ospf neighbor vecinos ospf y su estado"><td class="mono">show ip ospf neighbor</td><td>Vecinos OSPF y su estado</td></tr>
+<tr data-k="show vlan brief vlan y puertos asignados"><td class="mono">show vlan brief</td><td>VLAN y puertos asignados</td></tr>
+<tr data-k="show interfaces trunk trunks, vlan permitidas y nativa"><td class="mono">show interfaces trunk</td><td>Trunks, VLAN permitidas y nativa</td></tr>
+<tr data-k="show spanning-tree root bridge y roles de puerto"><td class="mono">show spanning-tree</td><td>Root bridge y roles de puerto</td></tr>
+<tr data-k="show ip eigrp topology tabla de topología dual"><td class="mono">show ip eigrp topology</td><td>Tabla de topología DUAL</td></tr>
+<tr data-k="show etherchannel summary estado de los canales"><td class="mono">show etherchannel summary</td><td>Estado de los canales</td></tr>
+<tr data-k="show ip dhcp binding asignaciones dhcp"><td class="mono">show ip dhcp binding</td><td>Asignaciones DHCP</td></tr>
+<tr data-k="show access-lists acl y contadores"><td class="mono">show access-lists</td><td>ACL y contadores</td></tr>
+<tr data-k="show crypto ipsec sa asociaciones de seguridad ipsec"><td class="mono">show crypto ipsec sa</td><td>Asociaciones de seguridad IPsec</td></tr>
+<tr data-k="show standby brief estado hsrp"><td class="mono">show standby brief</td><td>Estado HSRP</td></tr>
+<tr data-k="debug ip packet traza de paquetes (use con acl)"><td class="mono">debug ip packet</td><td>Traza de paquetes (use con ACL)</td></tr>
+</tbody></table><p id="sr-nocmd" hidden>Sin comandos. Prueba con otra palabra clave.</p></div><h4 style="margin-top:18px">Temas</h4><div class="grid">
+<a class="card click sr-t" href="tcpip.html" data-k="tcp/ip y direccionamiento modelo en capas, encapsulación, subnetting, vlsm y cidr. cada capa añade su cabecera: segmento (puertos), paquete (ip), trama (mac). arp resuelve ip a mac dentro del segmento; el router reescribe la cabecera l2 en cada salto y mantiene la l3 salvo con nat. icmp reporta errores (ttl excedido, destino inalcanzable) y dns traduce nombres con consultas udp/53."><h4>TCP/IP y direccionamiento</h4><p>Modelo en capas, encapsulación, subnetting, VLSM y CIDR.</p></a>
+<a class="card click sr-t" href="switching.html" data-k="switching cam table, reenvío, filtrado e inundación. el switch aprende la mac origen en la cam table (con puerto y vlan). si el destino es conocido reenvía por un solo puerto; si es desconocido, broadcast o multicast, inunda. cada puerto es un dominio de colisión; cada vlan, un dominio de broadcast."><h4>Switching</h4><p>CAM table, reenvío, filtrado e inundación.</p></a>
+<a class="card click sr-t" href="vlan.html" data-k="vlan, trunking y vtp 802.1q, vlan nativa, vlan de voz y modos vtp. 802.1q inserta una etiqueta de 4 bytes (vid de 12 bits). la vlan nativa viaja sin etiqueta. vtp propaga la base de vlan según el número de revisión: un switch con revisión mayor sobrescribe a los demás, por lo que conviene reiniciar la revisión antes de conectar equipos nuevos."><h4>VLAN, trunking y VTP</h4><p>802.1Q, VLAN nativa, VLAN de voz y modos VTP.</p></a>
+<a class="card click sr-t" href="stp.html" data-k="stp y etherchannel prevención de bucles y agregación de enlaces. los switches eligen un root bridge por el menor bridge id (prioridad + mac). cada switch calcula el puerto raíz por menor coste al root y bloquea los puertos redundantes. rapid-pvst+ converge en segundos mediante negociación proposal/agreement. lacp agrupa hasta 8 enlaces con balanceo por hash."><h4>STP y EtherChannel</h4><p>Prevención de bucles y agregación de enlaces.</p></a>
+<a class="card click sr-t" href="routing.html" data-k="routing e inter-vlan estático, dinámico, distancia administrativa y router-on-a-stick. el router elige la ruta por prefijo más largo; en caso de empate de prefijo gana la menor distancia administrativa (conectada 0, estática 1, eigrp 90, ospf 110, rip 120) y, dentro del mismo protocolo, la menor métrica. inter-vlan se resuelve con subinterfaces 802.1q o svi en un switch multicapa."><h4>Routing e inter-VLAN</h4><p>Estático, dinámico, distancia administrativa y router-on-a-stick.</p></a>
+<a class="card click sr-t" href="rip.html" data-k="rip vector-distancia por conteo de saltos. ripv1 es classful y usa broadcast; ripv2 incorpora máscara y multicast 224.0.0.9. la métrica es el número de saltos, con 15 como máximo. split horizon y poison reverse evitan bucles de conteo al infinito. actualiza cada 30 s, lo que lo hace lento para converger."><h4>RIP</h4><p>Vector-distancia por conteo de saltos.</p></a>
+<a class="card click sr-t" href="eigrp.html" data-k="eigrp algoritmo dual, sucesores y condición de factibilidad. mantiene tablas de vecinos, de topología y de enrutamiento. dual elige como successor el camino de menor distancia total; un feasible successor cumple que su distancia anunciada es menor que la distancia factible del successor, lo que garantiza ausencia de bucles. métrica por defecto: ancho de banda y retardo."><h4>EIGRP</h4><p>Algoritmo DUAL, sucesores y condición de factibilidad.</p></a>
+<a class="card click sr-t" href="ospf.html" data-k="ospf lsa, spf, dr/bdr, áreas y enlaces virtuales. los vecinos pasan por down, init, 2-way, exstart, exchange, loading y full. cada router inunda lsa y construye la misma lsdb por área; luego ejecuta dijkstra con coste = ancho de banda de referencia / ancho de banda de la interfaz. en redes multiacceso se elige dr y bdr por prioridad y luego router-id. todas las áreas se conectan al área 0."><h4>OSPF</h4><p>LSA, SPF, DR/BDR, áreas y enlaces virtuales.</p></a>
+<a class="card click sr-t" href="dhcp.html" data-k="dhcp proceso dora, relay y snooping. discover, offer, request y acknowledge. como el cliente usa broadcast, el router con ip helper-address lo reenvía en unicast al servidor. dhcp snooping marca puertos como trusted o untrusted y construye una tabla de asignaciones que alimenta dai."><h4>DHCP</h4><p>Proceso DORA, relay y snooping.</p></a>
+<a class="card click sr-t" href="acl.html" data-k="acl y nat standard, extended, named y wildcard. las acl se evalúan de arriba abajo y terminan con un deny implícito. las standard filtran por origen y se colocan cerca del destino; las extended filtran por protocolo, origen, destino y puerto y se colocan cerca del origen. wildcard 0.0.0.255 equivale a /24."><h4>ACL y NAT</h4><p>Standard, extended, named y wildcard.</p></a>
+<a class="card click sr-t" href="vpn.html" data-k="vpn e ipsec site-to-site, acceso remoto, gre y ssl vpn. ike fase 1 autentica a los pares y crea una asociación de seguridad; la fase 2 negocia los parámetros de esp para el tráfico. gre encapsula multicast y permite enrutamiento dinámico sobre el túnel, y se protege con ipsec. ssl vpn usa tls y es adecuada para acceso remoto."><h4>VPN e IPsec</h4><p>Site-to-site, acceso remoto, GRE y SSL VPN.</p></a>
+<a class="card click sr-t" href="fhrp.html" data-k="hsrp y fhrp puerta de enlace redundante. hsrp elige un router activo mediante prioridad (100 por defecto) y presenta una ip y mac virtuales. con preempt, un router de mayor prioridad recupera el rol; el seguimiento de interfaces reduce la prioridad ante un fallo del enlace ascendente. vrrp es el estándar abierto y glbp añade balanceo de carga."><h4>HSRP y FHRP</h4><p>Puerta de enlace redundante.</p></a>
+<a class="card click sr-t" href="seguridad.html" data-k="ipv6, wireless y seguridad direccionamiento 128 bits, wlc y defensa en capa 2. ipv6 usa slaac y neighbor discovery en lugar de arp. en wireless empresarial, los ap ligeros se asocian al wlc por capwap. en l2 se combinan port-security, dai, ip source guard y 802.1x."><h4>IPv6, wireless y seguridad</h4><p>Direccionamiento 128 bits, WLC y defensa en capa 2.</p></a>
+</div><p id="sr-notopic" hidden>Sin temas coincidentes.</p></div></section>
+</main>
+</div>
+<script src="js/app.js"></script>
+</body>
+</html>

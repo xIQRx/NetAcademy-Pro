@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Centro de certificaciones · NetAcademy Pro</title>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body data-page="cert">
+<header class="vh" id="vh">
+<canvas id="vc" aria-hidden="true"></canvas>
+<div class="vh-shade"></div><div class="vh-beam"></div>
+<div class="vh-in">
+<div class="vh-live"><i></i> EN VIVO · Red global de laboratorios</div>
+<h1 class="vh-title"><svg class="vh-logo" viewBox="0 0 48 48" aria-hidden="true"><g fill="#049FD9"><rect x="4" y="26" width="6" height="16" rx="2"/><rect x="14" y="18" width="6" height="24" rx="2"/><rect x="24" y="10" width="6" height="32" rx="2"/><rect x="34" y="2" width="6" height="40" rx="2"/></g></svg><span class="vh-name">NetAcademy</span><span class="vh-pro">Pro</span></h1>
+<p class="vh-sub">Telecomunicaciones y Redes Cisco · De la trama Ethernet a la convergencia de OSPF</p>
+<div class="vh-cta"><a class="btn" href="tcpip.html">Comenzar a aprender</a><a class="btn vh-ghost" href="laboratorios.html">Abrir laboratorio</a></div>
+</div>
+</header>    
+<div class="app">
+<aside id="side"><h1><a href="index.html">NetAcademy Pro</a></h1><small>Telecomunicaciones y Redes Cisco</small>
+<a class="nav" href="index.html" data-p="home">Inicio<span class="ck"></span></a>
+<a class="nav" href="tcpip.html" data-p="tcpip" data-id="tcpip">TCP/IP y direccionamiento<span class="ck"></span></a>
+<a class="nav" href="switching.html" data-p="switching" data-id="switching">Switching<span class="ck"></span></a>
+<a class="nav" href="vlan.html" data-p="vlan" data-id="vlan">VLAN, trunking y VTP<span class="ck"></span></a>
+<a class="nav" href="stp.html" data-p="stp" data-id="stp">STP y EtherChannel<span class="ck"></span></a>
+<a class="nav" href="routing.html" data-p="routing" data-id="routing">Routing e inter-VLAN<span class="ck"></span></a>
+<a class="nav" href="rip.html" data-p="rip" data-id="rip">RIP<span class="ck"></span></a>
+<a class="nav" href="eigrp.html" data-p="eigrp" data-id="eigrp">EIGRP<span class="ck"></span></a>
+<a class="nav" href="ospf.html" data-p="ospf" data-id="ospf">OSPF<span class="ck"></span></a>
+<a class="nav" href="dhcp.html" data-p="dhcp" data-id="dhcp">DHCP<span class="ck"></span></a>
+<a class="nav" href="acl.html" data-p="acl" data-id="acl">ACL y NAT<span class="ck"></span></a>
+<a class="nav" href="vpn.html" data-p="vpn" data-id="vpn">VPN e IPsec<span class="ck"></span></a>
+<a class="nav" href="fhrp.html" data-p="fhrp" data-id="fhrp">HSRP y FHRP<span class="ck"></span></a>
+<a class="nav" href="seguridad.html" data-p="sec" data-id="sec">IPv6, wireless y seguridad<span class="ck"></span></a>
+<a class="nav" href="laboratorios.html" data-p="labs">Laboratorios virtuales<span class="ck"></span></a>
+<a class="nav" href="comandos.html" data-p="cmds">Referencia de comandos<span class="ck"></span></a>
+<a class="nav on" href="certificaciones.html" data-p="cert" aria-current="page">Centro de certificaciones<span class="ck"></span></a>
+</aside>
+<main>
+<div class="top"><form id="sf" action="buscar.html" method="get" role="search"><input id="q" name="q" type="search" placeholder="Buscar comandos o temas: ospf, vlan, show ip route…" aria-label="Buscador técnico"></form><button class="btn alt" id="theme" type="button">Modo oscuro</button></div>
+<section class="sec"><h3>Centro de certificaciones</h3><p>Prepara CCNA 200-301, ENCOR (350-401) y ENARSI (300-410). Responde para ganar XP.</p><div class="row" style="margin-bottom:14px"><span class="badge">CCNA 200-301</span><span class="badge">CCNP Enterprise</span><span class="badge">ENCOR</span><span class="badge">ENARSI</span></div>
+<div class="card q" data-q="0" data-ok="Prefijo más largo" style="margin-bottom:12px"><h4>1. ¿Qué criterio usa primero un router para elegir entre dos rutas al mismo destino?</h4><button class="opt" type="button" data-o="Menor métrica">Menor métrica</button><button class="opt" type="button" data-o="Prefijo más largo">Prefijo más largo</button><button class="opt" type="button" data-o="Menor distancia administrativa">Menor distancia administrativa</button><p class="ex" style="margin-top:8px" hidden>La coincidencia de prefijo más largo precede a la distancia administrativa y a la métrica.</p></div>
+<div class="card q" data-q="1" data-ok="Mayor prioridad y, en empate, mayor router-ID" style="margin-bottom:12px"><h4>2. En OSPF multiacceso, ¿quién se elige DR?</h4><button class="opt" type="button" data-o="Menor router-ID">Menor router-ID</button><button class="opt" type="button" data-o="Mayor prioridad y, en empate, mayor router-ID">Mayor prioridad y, en empate, mayor router-ID</button><button class="opt" type="button" data-o="El router con más vecinos">El router con más vecinos</button><p class="ex" style="margin-top:8px" hidden>La prioridad se evalúa primero; el router-ID desempata.</p></div>
+<div class="card q" data-q="2" data-ok="Su distancia anunciada es menor que la distancia factible" style="margin-bottom:12px"><h4>3. ¿Qué garantiza que un feasible successor no forme un bucle?</h4><button class="opt" type="button" data-o="Tiene menos saltos">Tiene menos saltos</button><button class="opt" type="button" data-o="Su distancia anunciada es menor que la distancia factible">Su distancia anunciada es menor que la distancia factible</button><button class="opt" type="button" data-o="Está en el mismo área">Está en el mismo área</button><p class="ex" style="margin-top:8px" hidden>Es la feasibility condition de DUAL.</p></div>
+<div class="card q" data-q="3" data-ok="La VLAN nativa" style="margin-bottom:12px"><h4>4. Un trunk 802.1Q envía sin etiqueta el tráfico de…</h4><button class="opt" type="button" data-o="La VLAN de voz">La VLAN de voz</button><button class="opt" type="button" data-o="La VLAN nativa">La VLAN nativa</button><button class="opt" type="button" data-o="La VLAN 1 siempre">La VLAN 1 siempre</button><p class="ex" style="margin-top:8px" hidden>La VLAN nativa es la única sin etiqueta.</p></div>
+<div class="card q" data-q="4" data-ok="Acknowledge" style="margin-bottom:12px"><h4>5. ¿Cuál es el último mensaje del proceso DORA?</h4><button class="opt" type="button" data-o="Offer">Offer</button><button class="opt" type="button" data-o="Request">Request</button><button class="opt" type="button" data-o="Acknowledge">Acknowledge</button><p class="ex" style="margin-top:8px" hidden>El servidor confirma la concesión con un DHCPACK.</p></div>
+<div class="card q" data-q="5" data-ok="30" style="margin-bottom:12px"><h4>6. ¿Cuántos hosts útiles tiene una red /27?</h4><button class="opt" type="button" data-o="32">32</button><button class="opt" type="button" data-o="30">30</button><button class="opt" type="button" data-o="62">62</button><p class="ex" style="margin-top:8px" hidden>2^5 - 2 = 30.</p></div>
+</section>
+</main>
+</div>
+<script src="js/app.js"></script>
+</body>
+</html>

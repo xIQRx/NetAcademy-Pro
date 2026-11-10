@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Referencia de comandos · NetAcademy Pro</title>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body data-page="cmds">
+<header class="vh" id="vh">
+<canvas id="vc" aria-hidden="true"></canvas>
+<div class="vh-shade"></div><div class="vh-beam"></div>
+<div class="vh-in">
+<div class="vh-live"><i></i> EN VIVO · Red global de laboratorios</div>
+<h1 class="vh-title"><svg class="vh-logo" viewBox="0 0 48 48" aria-hidden="true"><g fill="#049FD9"><rect x="4" y="26" width="6" height="16" rx="2"/><rect x="14" y="18" width="6" height="24" rx="2"/><rect x="24" y="10" width="6" height="32" rx="2"/><rect x="34" y="2" width="6" height="40" rx="2"/></g></svg><span class="vh-name">NetAcademy</span><span class="vh-pro">Pro</span></h1>
+<p class="vh-sub">Telecomunicaciones y Redes Cisco · De la trama Ethernet a la convergencia de OSPF</p>
+<div class="vh-cta"><a class="btn" href="tcpip.html">Comenzar a aprender</a><a class="btn vh-ghost" href="laboratorios.html">Abrir laboratorio</a></div>
+</div>
+</header>  
+<div class="app">
+<aside id="side"><h1><a href="index.html">NetAcademy Pro</a></h1><small>Telecomunicaciones y Redes Cisco</small>
+<a class="nav" href="index.html" data-p="home">Inicio<span class="ck"></span></a>
+<a class="nav" href="tcpip.html" data-p="tcpip" data-id="tcpip">TCP/IP y direccionamiento<span class="ck"></span></a>
+<a class="nav" href="switching.html" data-p="switching" data-id="switching">Switching<span class="ck"></span></a>
+<a class="nav" href="vlan.html" data-p="vlan" data-id="vlan">VLAN, trunking y VTP<span class="ck"></span></a>
+<a class="nav" href="stp.html" data-p="stp" data-id="stp">STP y EtherChannel<span class="ck"></span></a>
+<a class="nav" href="routing.html" data-p="routing" data-id="routing">Routing e inter-VLAN<span class="ck"></span></a>
+<a class="nav" href="rip.html" data-p="rip" data-id="rip">RIP<span class="ck"></span></a>
+<a class="nav" href="eigrp.html" data-p="eigrp" data-id="eigrp">EIGRP<span class="ck"></span></a>
+<a class="nav" href="ospf.html" data-p="ospf" data-id="ospf">OSPF<span class="ck"></span></a>
+<a class="nav" href="dhcp.html" data-p="dhcp" data-id="dhcp">DHCP<span class="ck"></span></a>
+<a class="nav" href="acl.html" data-p="acl" data-id="acl">ACL y NAT<span class="ck"></span></a>
+<a class="nav" href="vpn.html" data-p="vpn" data-id="vpn">VPN e IPsec<span class="ck"></span></a>
+<a class="nav" href="fhrp.html" data-p="fhrp" data-id="fhrp">HSRP y FHRP<span class="ck"></span></a>
+<a class="nav" href="seguridad.html" data-p="sec" data-id="sec">IPv6, wireless y seguridad<span class="ck"></span></a>
+<a class="nav" href="laboratorios.html" data-p="labs">Laboratorios virtuales<span class="ck"></span></a>
+<a class="nav on" href="comandos.html" data-p="cmds" aria-current="page">Referencia de comandos<span class="ck"></span></a>
+<a class="nav" href="certificaciones.html" data-p="cert">Centro de certificaciones<span class="ck"></span></a>
+</aside>
+<main>
+<div class="top"><form id="sf" action="buscar.html" method="get" role="search"><input id="q" name="q" type="search" placeholder="Buscar comandos o temas: ospf, vlan, show ip route…" aria-label="Buscador técnico"></form><button class="btn alt" id="theme" type="button">Modo oscuro</button></div>
+<section class="sec"><h3>Referencia de comandos</h3><p>Comandos completos de configuración y verificación de cada tema. Pulsa «Copiar» para llevarlos a tu terminal.</p><div class="chips"><button class="chip on" type="button" data-s="all">Todos</button><button class="chip" type="button" data-s="tcpip">TCP/IP y direccionamiento</button><button class="chip" type="button" data-s="switching">Switching</button><button class="chip" type="button" data-s="vlan">VLAN, trunking y VTP</button><button class="chip" type="button" data-s="stp">STP y EtherChannel</button><button class="chip" type="button" data-s="routing">Routing e inter-VLAN</button><button class="chip" type="button" data-s="rip">RIP</button><button class="chip" type="button" data-s="eigrp">EIGRP</button><button class="chip" type="button" data-s="ospf">OSPF</button><button class="chip" type="button" data-s="dhcp">DHCP</button><button class="chip" type="button" data-s="acl">ACL y NAT</button><button class="chip" type="button" data-s="vpn">VPN e IPsec</button><button class="chip" type="button" data-s="fhrp">HSRP y FHRP</button><button class="chip" type="button" data-s="sec">IPv6, wireless y seguridad</button></div><div class="row" style="margin-top:12px"><input id="cf" type="search" placeholder="Filtrar comandos…" aria-label="Filtrar comandos" style="flex:1"></div></section>
+<section class="sec cmd-sec" data-topic="tcpip" style="margin-top:24px"><h3>TCP/IP y direccionamiento</h3>
+<div class="card cb"><h4>Direccionamiento y rutas</h4><button class="btn alt cp" type="button">Copiar</button><pre>interface g0/0
+ description LAN-VENTAS
+ ip address 192.168.1.1 255.255.255.0
+ no shutdown
+ip route 0.0.0.0 0.0.0.0 203.0.113.1
+ip route 10.2.0.0 255.255.0.0 10.0.0.2</pre></div>
+<div class="card cb"><h4>DNS, ARP e ICMP</h4><button class="btn alt cp" type="button">Copiar</button><pre>ip domain-lookup
+ip domain-name lab.local
+ip name-server 8.8.8.8
+show ip arp
+clear arp-cache
+ping 8.8.8.8 source g0/0
+traceroute 8.8.8.8</pre></div>
+<div class="card cb"><h4>Verificación</h4><button class="btn alt cp" type="button">Copiar</button><pre>show ip interface brief
+show interfaces g0/0
+show ip route
+show protocols
+show tcp brief
+show running-config | section interface</pre></div>
+</section>
+<section class="sec cmd-sec" data-topic="switching" style="margin-top:24px"><h3>Switching</h3>
+<div class="card cb"><h4>Tabla CAM</h4><button class="btn alt cp" type="button">Copiar</button><pre>show mac address-table
+show mac address-table dynamic
+show mac address-table address 0050.7966.6801
+show mac address-table interface f0/1
+mac address-table aging-time 300
+clear mac address-table dynamic</pre></div>
+<div class="card cb"><h4>Puertos de acceso</h4><button class="btn alt cp" type="button">Copiar</button><pre>interface range f0/1-24
+ switchport mode access
+ switchport nonegotiate
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+ speed auto
+ duplex auto</pre></div>
+<div class="card cb"><h4>Port-security</h4><button class="btn alt cp" type="button">Copiar</button><pre>interface f0/1
+ switchport port-security
+ switchport port-security maximum 2
+ switchport port-security violation restrict
+ switchport port-security mac-address sticky
+show port-security
+show port-security interface f0/1</pre></div>
+<div class="card cb"><h4>Errores y errdisable</h4><button class="btn alt cp" type="button">Copiar</button><pre>show interfaces status
+show interfaces f0/1 counters errors
+show errdisable recovery
+errdisable recovery cause psecure-violation
+errdisable recovery interval 300</pre></div>
+</section>
+<section class="sec cmd-sec" data-topic="vlan" style="margin-top:24px"><h3>VLAN, trunking y VTP</h3>
+<div class="card cb"><h4>Crear VLAN</h4><button class="btn alt cp" type="button">Copiar</button><pre>vlan 10
+ name VENTAS
+vlan 20
+ name VOZ
+vlan 99
+ name NATIVA</pre></div>
+<div class="card cb"><h4>Puertos de acceso y voz</h4><button class="btn alt cp" type="button">Copiar</button><pre>interface range f0/1-12
+ switchport mode access
+ switchport access vlan 10
+ switchport voice vlan 20
+ spanning-tree portfast</pre></div>
+<div class="card cb"><h4>Trunk 802.1Q</h4><button class="btn alt cp" type="button">Copiar</button><pre>interface g0/1
+ switchport trunk encapsulation dot1q
+ switchport mode trunk
+ switchport trunk native vlan 99
+ switchport trunk allowed vlan 10,20,99
+ switchport nonegotiate</pre></div>
+<div class="card cb"><h4>VTP (server, client, transparent, pruning)</h4><button class="btn alt cp" type="button">Copiar</button><pre>vtp domain LAB
+vtp version 2
+vtp password Cisco123
+vtp mode server
+! En otro switch: vtp mode client
+! En un switch aislado: vtp mode transparent
+vtp pruning</pre></div>
+<div class="card cb"><h4>Verificación y limpieza</h4><button class="btn alt cp" type="button">Copiar</button><pre>show vlan brief
+show vlan id 10
+show interfaces trunk
+show interfaces f0/1 switchport
+show vtp status
+no vlan 10
+delete flash:vlan.dat</pre></div>
+</section>
+<section class="sec cmd-sec" data-topic="stp" style="margin-top:24px"><h3>STP y EtherChannel</h3>
+<div class="card cb"><h4>Modo y root bridge</h4><button class="btn alt cp" type="button">Copiar</button><pre>spanning-tree mode rapid-pvst
+spanning-tree vlan 10 root primary
+spanning-tree vlan 10 root secondary
+spanning-tree vlan 20 priority 8192</pre></div>
+<div class="card cb"><h4>Costo y prioridad por puerto</h4><button class="btn alt cp" type="button">Copiar</button><pre>interface g0/1
+ spanning-tree vlan 10 cost 10
+ spanning-tree vlan 10 port-priority 64</pre></div>
+<div class="card cb"><h4>Protecciones</h4><button class="btn alt cp" type="button">Copiar</button><pre>interface f0/1
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+interface g0/2
+ spanning-tree guard root
+spanning-tree loopguard default
+spanning-tree portfast default</pre></div>
+<div class="card cb"><h4>EtherChannel</h4><button class="btn alt cp" type="button">Copiar</button><pre>interface range g0/1-2
+ channel-group 1 mode active
+interface port-channel 1
+ switchport mode trunk
+! PAgP: mode desirable | estático: mode on
+port-channel load-balance src-dst-ip</pre></div>
+<div class="card cb"><h4>Verificación</h4><button class="btn alt cp" type="button">Copiar</button><pre>show spanning-tree
+show spanning-tree vlan 10
+show spanning-tree summary
+show spanning-tree interface g0/1 detail
+show etherchannel summary
+show interfaces port-channel 1</pre></div>
+</section>
+<section class="sec cmd-sec" data-topic="routing" style="margin-top:24px"><h3>Routing e inter-VLAN</h3>
+<div class="card cb"><h4>Rutas estáticas, por defecto y flotante</h4><button class="btn alt cp" type="button">Copiar</button><pre>ip route 192.168.20.0 255.255.255.0 10.0.0.2
+ip route 0.0.0.0 0.0.0.0 203.0.113.1
+ip route 10.50.0.0 255.255.0.0 198.51.100.2 250
+ip route 172.16.0.0 255.255.252.0 Null0</pre></div>
+<div class="card cb"><h4>Router-on-a-stick</h4><button class="btn alt cp" type="button">Copiar</button><pre>interface g0/0
+ no shutdown
+interface g0/0.10
+ encapsulation dot1Q 10
+ ip address 192.168.10.1 255.255.255.0
+interface g0/0.99
+ encapsulation dot1Q 99 native</pre></div>
+<div class="card cb"><h4>Switch multicapa (SVI)</h4><button class="btn alt cp" type="button">Copiar</button><pre>ip routing
+interface vlan 10
+ ip address 192.168.10.1 255.255.255.0
+ no shutdown
+interface g0/24
+ no switchport
+ ip address 10.0.0.1 255.255.255.252</pre></div>
+<div class="card cb"><h4>Verificación</h4><button class="btn alt cp" type="button">Copiar</button><pre>show ip route
+show ip route 192.168.10.0
+show ip route static
+show ip protocols
+show ip cef
+show ip route summary</pre></div>
+</section>
+<section class="sec cmd-sec" data-topic="rip" style="margin-top:24px"><h3>RIP</h3>
+<div class="card cb"><h4>Configuración RIPv2</h4><button class="btn alt cp" type="button">Copiar</button><pre>router rip
+ version 2
+ no auto-summary
+ network 10.0.0.0
+ network 192.168.1.0
+ passive-interface g0/1
+ default-information originate</pre></div>
+<div class="card cb"><h4>Autenticación</h4><button class="btn alt cp" type="button">Copiar</button><pre>key chain RIPKEY
+ key 1
+  key-string Cisco123
+interface s0/0
+ ip rip authentication mode md5
+ ip rip authentication key-chain RIPKEY</pre></div>
+<div class="card cb"><h4>Verificación y depuración</h4><button class="btn alt cp" type="button">Copiar</button><pre>show ip protocols
+show ip rip database
+show ip route rip
+debug ip rip
+undebug all</pre></div>
+</section>
+<section class="sec cmd-sec" data-topic="eigrp" style="margin-top:24px"><h3>EIGRP</h3>
+<div class="card cb"><h4>EIGRP clásico</h4><button class="btn alt cp" type="button">Copiar</button><pre>router eigrp 100
+ eigrp router-id 1.1.1.1
+ network 10.0.0.0 0.255.255.255
+ network 192.168.1.0 0.0.0.255
+ no auto-summary
+ passive-interface g0/1
+ maximum-paths 4
+ variance 2</pre></div>
+<div class="card cb"><h4>Named mode</h4><button class="btn alt cp" type="button">Copiar</button><pre>router eigrp NETLAB
+ address-family ipv4 unicast autonomous-system 100
+  af-interface default
+   passive-interface
+  exit-af-interface
+  af-interface g0/0
+   no passive-interface
+  exit-af-interface
+  topology base
+  exit-af-topology
+  network 10.0.0.0 0.255.255.255
+  eigrp router-id 1.1.1.1</pre></div>
+<div class="card cb"><h4>Métrica, sumarización y stub</h4><button class="btn alt cp" type="button">Copiar</button><pre>interface g0/0
+ bandwidth 100000
+ delay 100
+ ip summary-address eigrp 100 10.1.0.0 255.255.0.0
+router eigrp 100
+ eigrp stub connected summary</pre></div>
+<div class="card cb"><h4>Autenticación MD5</h4><button class="btn alt cp" type="button">Copiar</button><pre>key chain EIGRPKEY
+ key 1
+  key-string Cisco123
+interface g0/0
+ ip authentication mode eigrp 100 md5
+ ip authentication key-chain eigrp 100 EIGRPKEY</pre></div>
+<div class="card cb"><h4>Verificación</h4><button class="btn alt cp" type="button">Copiar</button><pre>show ip eigrp neighbors
+show ip eigrp topology
+show ip eigrp topology all-links
+show ip eigrp interfaces detail
+show ip route eigrp
+show ip protocols</pre></div>
+</section>
+<section class="sec cmd-sec" data-topic="ospf" style="margin-top:24px"><h3>OSPF</h3>
+<div class="card cb"><h4>Configuración básica</h4><button class="btn alt cp" type="button">Copiar</button><pre>router ospf 1
+ router-id 1.1.1.1
+ network 10.0.0.0 0.0.0.255 area 0
+ passive-interface default
+ no passive-interface g0/0
+ auto-cost reference-bandwidth 10000
+ default-information originate
+! Alternativa por interfaz:
+interface g0/0
+ ip ospf 1 area 0</pre></div>
+<div class="card cb"><h4>DR/BDR, red y temporizadores</h4><button class="btn alt cp" type="button">Copiar</button><pre>interface g0/0
+ ip ospf priority 100
+ ip ospf network point-to-point
+ ip ospf cost 10
+ ip ospf hello-interval 5
+ ip ospf dead-interval 20</pre></div>
+<div class="card cb"><h4>Áreas especiales</h4><button class="btn alt cp" type="button">Copiar</button><pre>! Stub (en todos los routers del área)
+router ospf 1
+ area 1 stub
+! Totally stubby (solo en el ABR)
+ area 1 stub no-summary
+! NSSA
+ area 2 nssa
+! Sumarización en el ABR
+ area 1 range 10.1.0.0 255.255.0.0
+! Virtual link
+ area 1 virtual-link 2.2.2.2</pre></div>
+<div class="card cb"><h4>Autenticación MD5</h4><button class="btn alt cp" type="button">Copiar</button><pre>interface g0/0
+ ip ospf authentication message-digest
+ ip ospf message-digest-key 1 md5 Cisco123
+router ospf 1
+ area 0 authentication message-digest</pre></div>
+<div class="card cb"><h4>Verificación y depuración</h4><button class="btn alt cp" type="button">Copiar</button><pre>show ip ospf neighbor
+show ip ospf interface g0/0
+show ip ospf database
+show ip ospf border-routers
+show ip route ospf
+show ip protocols
+debug ip ospf adj
+clear ip ospf process</pre></div>
+</section>
+<section class="sec cmd-sec" data-topic="dhcp" style="margin-top:24px"><h3>DHCP</h3>
+<div class="card cb"><h4>Servidor DHCP</h4><button class="btn alt cp" type="button">Copiar</button><pre>ip dhcp excluded-address 192.168.10.1 192.168.10.20
+ip dhcp pool VENTAS
+ network 192.168.10.0 255.255.255.0
+ default-router 192.168.10.1
+ dns-server 8.8.8.8
+ domain-name lab.local
+ lease 7
+ option 150 ip 10.0.0.10</pre></div>
+<div class="card cb"><h4>Relay y cliente</h4><button class="btn alt cp" type="button">Copiar</button><pre>interface g0/0.10
+ ip helper-address 10.0.0.5
+interface g0/1
+ ip address dhcp
+ no shutdown</pre></div>
+<div class="card cb"><h4>DHCP snooping</h4><button class="btn alt cp" type="button">Copiar</button><pre>ip dhcp snooping
+ip dhcp snooping vlan 10,20
+no ip dhcp snooping information option
+interface g0/1
+ ip dhcp snooping trust
+interface range f0/1-24
+ ip dhcp snooping limit rate 15</pre></div>
+<div class="card cb"><h4>Dynamic ARP Inspection e IP Source Guard</h4><button class="btn alt cp" type="button">Copiar</button><pre>ip arp inspection vlan 10,20
+interface g0/1
+ ip arp inspection trust
+interface f0/1
+ ip verify source</pre></div>
+<div class="card cb"><h4>Verificación</h4><button class="btn alt cp" type="button">Copiar</button><pre>show ip dhcp pool
+show ip dhcp binding
+show ip dhcp conflict
+show ip dhcp server statistics
+show ip dhcp snooping
+show ip dhcp snooping binding
+show ip arp inspection
+debug ip dhcp server packet</pre></div>
+</section>
+<section class="sec cmd-sec" data-topic="acl" style="margin-top:24px"><h3>ACL y NAT</h3>
+<div class="card cb"><h4>Standard</h4><button class="btn alt cp" type="button">Copiar</button><pre>access-list 10 permit 192.168.10.0 0.0.0.255
+access-list 10 deny any log
+ip access-list standard ADMIN
+ permit host 10.0.0.50
+ deny any log</pre></div>
+<div class="card cb"><h4>Extended</h4><button class="btn alt cp" type="button">Copiar</button><pre>access-list 110 permit tcp 10.1.10.0 0.0.0.255 any eq 443
+access-list 110 permit icmp any any echo-reply
+access-list 110 deny ip any any log
+ip access-list extended BLOQUEO
+ 10 permit tcp 10.1.10.0 0.0.0.255 any eq 80
+ 20 permit tcp any 10.1.10.0 0.0.0.255 established
+ 30 permit udp any any eq 53
+ 40 deny ip any any log</pre></div>
+<div class="card cb"><h4>Aplicación</h4><button class="btn alt cp" type="button">Copiar</button><pre>interface g0/0
+ ip access-group BLOQUEO in
+interface g0/1
+ ip access-group 110 out
+line vty 0 15
+ access-class ADMIN in</pre></div>
+<div class="card cb"><h4>Edición y horarios</h4><button class="btn alt cp" type="button">Copiar</button><pre>ip access-list extended BLOQUEO
+ no 30
+ 25 permit tcp any any eq 22
+ip access-list resequence BLOQUEO 10 10
+time-range HORARIO
+ periodic weekdays 8:00 to 18:00
+ip access-list extended BLOQUEO
+ 15 permit tcp any any eq 80 time-range HORARIO</pre></div>
+<div class="card cb"><h4>Verificación</h4><button class="btn alt cp" type="button">Copiar</button><pre>show access-lists
+show ip access-lists BLOQUEO
+show ip interface g0/0 | include access list
+show running-config | section access-list
+clear ip access-list counters</pre></div>
+</section>
+<section class="sec cmd-sec" data-topic="vpn" style="margin-top:24px"><h3>VPN e IPsec</h3>
+<div class="card cb"><h4>Túnel GRE</h4><button class="btn alt cp" type="button">Copiar</button><pre>interface Tunnel0
+ ip address 10.255.0.1 255.255.255.252
+ tunnel source g0/0
+ tunnel destination 198.51.100.2
+ tunnel mode gre ip
+router eigrp 100
+ network 10.255.0.0 0.0.0.3</pre></div>
+<div class="card cb"><h4>IPsec site-to-site (crypto map)</h4><button class="btn alt cp" type="button">Copiar</button><pre>crypto isakmp policy 10
+ encryption aes 256
+ hash sha256
+ authentication pre-share
+ group 14
+ lifetime 86400
+crypto isakmp key MiClave123 address 198.51.100.2
+crypto ipsec transform-set TS esp-aes 256 esp-sha256-hmac
+ mode tunnel
+access-list 120 permit ip 192.168.10.0 0.0.0.255 192.168.50.0 0.0.0.255
+crypto map CMAP 10 ipsec-isakmp
+ set peer 198.51.100.2
+ set transform-set TS
+ match address 120
+interface g0/0
+ crypto map CMAP</pre></div>
+<div class="card cb"><h4>GRE sobre IPsec (perfil)</h4><button class="btn alt cp" type="button">Copiar</button><pre>crypto ipsec profile VPN-PROF
+ set transform-set TS
+interface Tunnel0
+ tunnel protection ipsec profile VPN-PROF</pre></div>
+<div class="card cb"><h4>Verificación y depuración</h4><button class="btn alt cp" type="button">Copiar</button><pre>show crypto isakmp sa
+show crypto ipsec sa
+show crypto map
+show interfaces tunnel0
+debug crypto isakmp
+debug crypto ipsec
+clear crypto sa</pre></div>
+</section>
+<section class="sec cmd-sec" data-topic="fhrp" style="margin-top:24px"><h3>HSRP y FHRP</h3>
+<div class="card cb"><h4>HSRP</h4><button class="btn alt cp" type="button">Copiar</button><pre>interface vlan 10
+ standby version 2
+ standby 10 ip 192.168.10.254
+ standby 10 priority 110
+ standby 10 preempt delay minimum 60
+ standby 10 timers 1 3
+ standby 10 authentication md5 key-string Cisco123
+track 1 interface g0/1 line-protocol
+interface vlan 10
+ standby 10 track 1 decrement 20</pre></div>
+<div class="card cb"><h4>VRRP</h4><button class="btn alt cp" type="button">Copiar</button><pre>interface vlan 10
+ vrrp 10 ip 192.168.10.254
+ vrrp 10 priority 110
+ vrrp 10 preempt</pre></div>
+<div class="card cb"><h4>GLBP</h4><button class="btn alt cp" type="button">Copiar</button><pre>interface vlan 10
+ glbp 10 ip 192.168.10.254
+ glbp 10 priority 110
+ glbp 10 preempt
+ glbp 10 load-balancing round-robin</pre></div>
+<div class="card cb"><h4>Verificación</h4><button class="btn alt cp" type="button">Copiar</button><pre>show standby
+show standby brief
+show vrrp brief
+show glbp brief
+debug standby events</pre></div>
+</section>
+<section class="sec cmd-sec" data-topic="sec" style="margin-top:24px"><h3>IPv6, wireless y seguridad</h3>
+<div class="card cb"><h4>IPv6</h4><button class="btn alt cp" type="button">Copiar</button><pre>ipv6 unicast-routing
+interface g0/0
+ ipv6 address 2001:db8:10::1/64
+ ipv6 address fe80::1 link-local
+ no shutdown
+ipv6 route ::/0 2001:db8:ff::2
+show ipv6 interface brief
+show ipv6 neighbors
+show ipv6 route
+ping 2001:db8:10::2</pre></div>
+<div class="card cb"><h4>SSH y acceso seguro</h4><button class="btn alt cp" type="button">Copiar</button><pre>hostname R1
+ip domain-name lab.local
+crypto key generate rsa modulus 2048
+ip ssh version 2
+username admin secret Cisco123
+enable secret Cisco123
+service password-encryption
+login block-for 120 attempts 3 within 60
+banner motd # Acceso autorizado solamente #
+line vty 0 15
+ transport input ssh
+ login local
+ exec-timeout 5 0</pre></div>
+<div class="card cb"><h4>AAA local</h4><button class="btn alt cp" type="button">Copiar</button><pre>aaa new-model
+aaa authentication login default local
+aaa authorization exec default local
+username admin privilege 15 secret Cisco123</pre></div>
+<div class="card cb"><h4>Wireless (WLC AireOS)</h4><button class="btn alt cp" type="button">Copiar</button><pre>config wlan create 1 CORP CORP
+config wlan security wpa akm psk enable 1
+config wlan security wpa akm psk set-key ascii Cisco123 1
+config wlan enable 1
+show wlan summary
+show ap summary
+show client summary</pre></div>
+</section>
+<p id="cmd-none" hidden>Sin resultados. Prueba con otra palabra clave.</p>
+</main>
+</div>
+<script src="js/app.js"></script>
+</body>
+</html>
